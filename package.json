@@ -1,0 +1,25 @@
+{
+  "name": "mytodo",
+  "version": "1.0.0",
+  "description": "Simple todo app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "todo"
+  ],
+  "author": "Kimberly Hawthorne",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "mongodb": "^2.1.6",
+    "mongoskin": "^2.0.3"
+  },
+  "devDependencies": {
+    "node-sass": "^3.4.2",
+    "node-sass-middleware": "^0.9.7"
+  }
+}

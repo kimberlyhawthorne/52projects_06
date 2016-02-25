@@ -1,0 +1,14 @@
+<h1>Meet the Kittens</h1>
+
+{{#each kittens}}
+<div class="cat-card">
+	<a href="/{{name}}" alt="{{name}}">
+		<img src="{{imagePath}}" alt="{{name}}" />
+		<div class="overlay">
+			<span>{{name}}</span>
+		</div>
+
+	</a>
+</div>
+{{/each}}
+

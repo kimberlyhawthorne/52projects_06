@@ -1,0 +1,27 @@
+{{#each kittens}}
+	<h1>{{name}}</h1>
+
+	<div class="cat-card">
+		<img src="{{imagePath}}" alt={{name}} />
+
+		<ul id="{{_id}}" class="cat-profile">
+			<li>Name: <span>{{name}}</span></li>
+			<li>
+				Nicknames:
+				<span>
+				{{#each nicknames}}
+					{{#if @last}}
+						{{this}}
+					{{else}}
+						{{this}},&nbsp;
+					{{/if}}
+				{{/each}}
+				</span>
+			</li>
+			<li>Breed: <span>{{breed}}</span></li>
+			<li>Age: <span>{{age}}</span></li>
+			<li>Insane? <span>{{#if insane}}Yes{{else}}No{{/if}}</span></li>
+		</ul>
+	</div>
+{{/each}}
+
