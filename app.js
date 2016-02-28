@@ -3,16 +3,18 @@ var expresshbs = require('express-handlebars');
 var util = require('util');
 var sass = require('node-sass-middleware');
 var	mongodb = require('mongodb');
+
+var mongoURI = "mongodb://user:Password!@ds019078.mlab.com:19078/heroku_469qwd9p";
 var db;
 
 // instantiate application
 var app = express();
 
 // database connection
-mongodb.MongoClient.connect('mongodb://localhost:27017/kittens', function(err, database) {
+mongodb.MongoClient.connect(mongoURI, function(err, database) {
 	if (err) throw err;
 
-	database.collection('cats', function(err, results) {
+	database.collection('kittens', function(err, results) {
 		if (err) throw err;
 
 		db = results;
