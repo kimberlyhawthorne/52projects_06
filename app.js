@@ -4,7 +4,9 @@ var util = require('util');
 var sass = require('node-sass-middleware');
 var	mongodb = require('mongodb');
 
+// config
 var mongoURI = "mongodb://user:Password!@ds019078.mlab.com:19078/heroku_469qwd9p";
+var port = process.env.PORT || 3000;
 var db;
 
 // instantiate application
@@ -18,7 +20,7 @@ mongodb.MongoClient.connect(mongoURI, function(err, database) {
 		if (err) throw err;
 
 		db = results;
-		app.listen(3000);
+		app.listen(port);
 		appConfig(app);
 	})
 })
